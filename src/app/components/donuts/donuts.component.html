@@ -1,0 +1,12 @@
+<h1>Donuts!</h1>
+@if (donuts$ | async; as donuts) {
+    <div *ngFor= "let donut of donuts">
+        <h3>{{donut.name}}</h3>
+        <figure>
+            <img src={{donut.photo}} /> 
+            <figcaption><a href={{donut.photo_attribution}}>Photo Credit</a></figcaption>
+        </figure>
+    </div>   
+}
+@else {
+}
